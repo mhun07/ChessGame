@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual Environment
+.venv/
+venv/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Build
+build/
+dist/
+
+# Save files
+saves/*.json
+
+# Windows
+Thumbs.db
+Desktop
