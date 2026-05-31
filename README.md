@@ -1,10 +1,10 @@
-# ♟️ ĐỒ ÁN TRÒ CHƠI CỜ VUA
+# ️ ĐỒ ÁN TRÒ CHƠI CỜ VUA
 
 Ứng dụng trò chơi cờ vua được phát triển bằng **Python** và thư viện **pygame-ce**, mô phỏng đầy đủ luật chơi cờ vua truyền thống cùng giao diện đồ họa trực quan và thân thiện với người dùng.
 
 ---
 
-# 📌 Giới Thiệu
+#  Giới Thiệu
 
 Đây là đồ án môn học được xây dựng nhằm áp dụng các kiến thức đã học về:
 
@@ -19,7 +19,7 @@
 
 ---
 
-# 🎯 Mục Tiêu Đề Tài
+#  Mục Tiêu Đề Tài
 
 * Xây dựng trò chơi cờ vua bằng Python.
 * Áp dụng mô hình lập trình hướng đối tượng.
@@ -30,9 +30,9 @@
 
 ---
 
-# ✨ Chức Năng Chính
+#  Chức Năng Chính
 
-## ♜ Luật Chơi Cờ Vua
+##  Luật Chơi Cờ Vua
 
 * Di chuyển quân cờ đúng luật
 * Kiểm tra nước đi hợp lệ
@@ -44,7 +44,7 @@
 * Bắt tốt qua đường (En Passant)
 * Ghi nhận lịch sử nước đi
 
-## 🎮 Giao Diện Người Dùng
+##  Giao Diện Người Dùng
 
 * Bàn cờ đồ họa trực quan
 * Hiển thị lượt chơi
@@ -53,7 +53,7 @@
 * Hiển thị các nước đi hợp lệ
 * Hiển thị thông báo kết thúc trận đấu
 
-## 💾 Quản Lý Trận Đấu
+##  Quản Lý Trận Đấu
 
 * Bắt đầu ván mới
 * Lưu trận đấu
@@ -64,7 +64,7 @@
 
 ---
 
-# 🛠 Công Nghệ Sử Dụng
+#  Công Nghệ Sử Dụng
 
 | Công nghệ  | Mô tả                                |
 | ---------- | ------------------------------------ |
@@ -77,7 +77,7 @@
 
 ---
 
-# 📂 Cấu Trúc Dự Án
+#  Cấu Trúc Dự Án
 
 ```text
 ChessGame/
@@ -99,7 +99,7 @@ ChessGame/
 
 ---
 
-# 🚀 Hướng Dẫn Cài Đặt
+#  Hướng Dẫn Cài Đặt
 
 ## 1. Clone dự án
 
@@ -141,7 +141,7 @@ pip install -r requirements.txt
 
 ---
 
-# ▶️ Chạy Chương Trình
+#  Chạy Chương Trình
 
 ```bash
 python main.py
@@ -149,7 +149,7 @@ python main.py
 
 ---
 
-# 🎮 Hướng Dẫn Sử Dụng
+#  Hướng Dẫn Sử Dụng
 
 | Thao tác   | Chức năng         |
 | ---------- | ----------------- |
@@ -162,7 +162,7 @@ python main.py
 
 ---
 
-# 🏗 Kiến Trúc Hệ Thống
+#  Kiến Trúc Hệ Thống
 
 ### Engine Layer
 
@@ -205,7 +205,7 @@ Chứa các hàm hỗ trợ được sử dụng chung trong toàn bộ dự án
 
 ---
 
-# 📚 Kiến Thức Áp Dụng
+#  Kiến Thức Áp Dụng
 
 Thông qua đồ án này, các kiến thức sau đã được vận dụng:
 
@@ -219,7 +219,7 @@ Thông qua đồ án này, các kiến thức sau đã được vận dụng:
 
 ---
 
-# 📸 Hình Ảnh Minh Họa
+#  Hình Ảnh Minh Họa
 
 Có thể bổ sung ảnh chụp màn hình chương trình tại đây:
 
@@ -233,18 +233,10 @@ Có thể bổ sung ảnh chụp màn hình chương trình tại đây:
 
 ---
 
-# 👨‍💻 Thông Tin Sinh Viên
+#  Thông Tin Tác Giả
 
 **Họ và tên:** Lê Minh Hùng
-
-**MSSV:** 3025102193
-
-**Môn học:** Lập Trình Python
 
 **GitHub:** https://github.com/mhun07
 
 ---
-
-# 📄 Giấy Phép
-
-Dự án được phát triển phục vụ mục đích học tập, nghiên cứu và báo cáo môn học.
