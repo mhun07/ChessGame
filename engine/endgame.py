@@ -1,4 +1,5 @@
 from core.game_state import GameStatus
+from utils.sounds import sound_manager
 from engine.validator import is_in_check, is_checkmate, is_stalemate
 
 
@@ -25,8 +26,10 @@ def update_timer_status(state):
         state.status = GameStatus.TIMEOUT
         state.game_over = True
         state.winner_text = "Đen thắng do hết giờ !!!"
+        sound_manager.play("game_over")
 
     elif state.black_timer.time_left <= 0:
         state.status = GameStatus.TIMEOUT
         state.game_over = True
         state.winner_text = "Trắng thắng do hết giờ !!!"
+        sound_manager.play("game_over")

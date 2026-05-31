@@ -1,5 +1,6 @@
 from core.config import INCREMENT_SECONDS, AUTO_QUEEN
 from utils.helpers import opposite
+from utils.sounds import sound_manager
 from engine.validator import legal_moves_for_piece, is_in_check, is_checkmate
 from engine.special_moves import apply_special_move, update_castling_rights, update_en_passant, is_promotion
 from engine.notation import simple_san
@@ -17,6 +18,7 @@ def select_square(state, pos):
     if piece and piece[0] == state.turn:
         state.selected = pos
         state.legal_moves = legal_moves_for_piece(state, pos)
+        sound_manager.play("select")
         return True
 
     state.selected = None
@@ -63,6 +65,7 @@ def try_move(state, src, dst, promotion=None):
             state.captured_black.append(captured)
 
     castle = piece[1] == "K" and abs(dc - sc) == 2
+    was_capture = bool(captured)
 
     update_castling_rights(state, src, dst, piece, captured_before or captured)
     update_en_passant(state, src, dst, piece)
@@ -103,6 +106,18 @@ def try_move(state, src, dst, promotion=None):
     state.promotion_menu = False
 
     update_game_status(state)
+
+    if state.game_over:
+        sound_manager.play("game_over")
+    elif check:
+        sound_manager.play("check")
+    elif castle:
+        sound_manager.play("castle")
+    elif was_capture:
+        sound_manager.play("capture")
+    else:
+        sound_manager.play("move")
+
     record_snapshot(state)
 
     return True

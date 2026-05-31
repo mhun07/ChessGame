@@ -6,6 +6,7 @@ import core.game_state as gs
 
 from utils.loaders import load_piece_images
 from utils.helpers import screen_to_square
+from utils.sounds import sound_manager
 
 from render.draw import draw_game
 from ui.promotion import draw_promotion_menu, handle_promotion_click
@@ -47,6 +48,7 @@ def handle_board_click(state, mouse_pos):
 
 
 def main():
+    sound_manager.load()
     time_seconds = run_time_settings()
 
     state = gs.state
@@ -81,14 +83,17 @@ def main():
 
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_r:
+                    sound_manager.play("menu")
                     state.reset()
                     state.piece_images = load_piece_images()
                     record_initial_snapshot(state)
 
                 elif event.key == pygame.K_s:
+                    sound_manager.play("menu")
                     save_game(state)
 
                 elif event.key == pygame.K_l:
+                    sound_manager.play("menu")
                     loaded = load_game()
 
                     if loaded is not None:
@@ -100,10 +105,12 @@ def main():
                         state.set_message(last_error or "Không tải được ván đấu")
 
                 elif event.key == pygame.K_p:
+                    sound_manager.play("menu")
                     path = save_pgn(state)
                     state.set_message(f"Đã xuất PGN: {path.name}")
 
                 elif event.key == pygame.K_v:
+                    sound_manager.play("menu")
                     start_replay(state)
 
                 elif event.key == pygame.K_RIGHT:
@@ -116,6 +123,7 @@ def main():
                     stop_replay(state)
 
                 elif event.key == pygame.K_t:
+                    sound_manager.play("menu")
                     theme_index = (theme_index + 1) % len(theme_names)
                     state.theme_name = theme_names[theme_index]
 
@@ -130,6 +138,7 @@ def main():
                     choice = handle_promotion_click(state, event.pos)
 
                     if choice:
+                        sound_manager.play("menu")
                         promote(state, choice)
                         state.clear_selection()
 
