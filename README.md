@@ -235,7 +235,7 @@ Có thể bổ sung ảnh chụp màn hình chương trình tại đây:
 
 #  Thông Tin Tác Giả
 
-**Họ và tên:** Lê Minh Hùng
+**Họ và tên:** Lê Minh Hưng
 
 **GitHub:** https://github.com/mhun07
 
